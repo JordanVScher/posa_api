@@ -17,9 +17,9 @@ depends_on = None
 
 
 def upgrade():
-    conn.execute("create database posa_db")
+    conn.execute("create database posa_db;")
     # updated engines on db_conn and alimbic.ini to include the name of the database
 
 
 def downgrade():
-    conn.execute("drop database posa_db")
+    conn.execute("drop database if exists posa_db;")
